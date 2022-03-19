@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Soft
 {
+    [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public partial class Form1 : Form
     {
         public Form1()
@@ -19,7 +14,19 @@ namespace Soft
 
         private void Temp_Delete_Click(object sender, EventArgs e)
         {
+            try 
+            {
+                System.IO.Directory.Delete(@"C:\Windows\Temp",true);
+            }
+            catch (System.UnauthorizedAccessException)
+            {
 
+            }
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
         }
     }
 }
