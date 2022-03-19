@@ -16,5 +16,10 @@ namespace Soft
         {
             InitializeComponent();
         }
+
+        private void Temp_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
