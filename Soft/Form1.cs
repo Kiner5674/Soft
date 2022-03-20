@@ -35,6 +35,7 @@ namespace Soft
             }
         }
 
+
         private string GetDebuggerDisplay()
         {
             return ToString();
