@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             this.Temp_Delete = new System.Windows.Forms.Button();
+            this.Folder_Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Temp_Delete
             // 
             this.Temp_Delete.Location = new System.Drawing.Point(12, 12);
             this.Temp_Delete.Name = "Temp_Delete";
-            this.Temp_Delete.Size = new System.Drawing.Size(132, 23);
+            this.Temp_Delete.Size = new System.Drawing.Size(112, 23);
             this.Temp_Delete.TabIndex = 0;
             this.Temp_Delete.Text = "Temp Delete";
             this.Temp_Delete.UseVisualStyleBackColor = true;
             this.Temp_Delete.Click += new System.EventHandler(this.Temp_Delete_Click);
+            // 
+            // Folder_Delete
+            // 
+            this.Folder_Delete.Location = new System.Drawing.Point(130, 12);
+            this.Folder_Delete.Name = "Folder_Delete";
+            this.Folder_Delete.Size = new System.Drawing.Size(130, 23);
+            this.Folder_Delete.TabIndex = 1;
+            this.Folder_Delete.Text = "Directory Delete";
+            this.Folder_Delete.UseVisualStyleBackColor = true;
+            this.Folder_Delete.Click += new System.EventHandler(this.Folder_Delete_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.Folder_Delete);
             this.Controls.Add(this.Temp_Delete);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button Temp_Delete;
+        private System.Windows.Forms.Button Folder_Delete;
     }
 }
 

@@ -35,10 +35,29 @@ namespace Soft
             }
         }
 
-
         private string GetDebuggerDisplay()
         {
             return ToString();
+        }
+
+        private void Folder_Delete_Click(object sender, EventArgs e)
+        {
+            //参考:https://dobon.net/vb/dotnet/form/folderdialog.html
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "削除するフォルダを指定してください。";
+            folderBrowserDialog.ShowNewFolderButton = false;
+            if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                DialogResult dialogresult = MessageBox.Show(folderBrowserDialog.SelectedPath + "を削除しますか?", 
+                    "確認", 
+                    MessageBoxButtons.YesNo, 
+                    MessageBoxIcon.Information);
+                if (dialogresult == DialogResult.Yes)
+                {
+                    System.IO.Directory.Delete(folderBrowserDialog.SelectedPath);
+                }
+            }
+
         }
     }
 }
