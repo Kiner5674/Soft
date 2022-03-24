@@ -1,2 +1,2 @@
 It is a convenient software packed with various things.
-Version 0.0.1.0(Now lambda Ver. Next beta Ver.)
+Version 0.0.2.0(Now lambda Ver. Next beta Ver.)

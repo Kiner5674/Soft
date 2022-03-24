@@ -30,6 +30,7 @@
         {
             this.Temp_Delete = new System.Windows.Forms.Button();
             this.Folder_Delete = new System.Windows.Forms.Button();
+            this.Omikuji = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Temp_Delete
@@ -52,11 +53,22 @@
             this.Folder_Delete.UseVisualStyleBackColor = true;
             this.Folder_Delete.Click += new System.EventHandler(this.Folder_Delete_Click);
             // 
+            // Omikuji
+            // 
+            this.Omikuji.Location = new System.Drawing.Point(267, 13);
+            this.Omikuji.Name = "Omikuji";
+            this.Omikuji.Size = new System.Drawing.Size(75, 23);
+            this.Omikuji.TabIndex = 2;
+            this.Omikuji.Text = "Omikuji";
+            this.Omikuji.UseVisualStyleBackColor = true;
+            this.Omikuji.Click += new System.EventHandler(this.Omikuji_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.Omikuji);
             this.Controls.Add(this.Folder_Delete);
             this.Controls.Add(this.Temp_Delete);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button Temp_Delete;
         private System.Windows.Forms.Button Folder_Delete;
+        private System.Windows.Forms.Button Omikuji;
     }
 }
 
